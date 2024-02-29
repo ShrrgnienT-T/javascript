@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Horas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Horas</h1>
+        <form id="hours-form">
+            <label for="day">Dia do Mês:</label>
+            <input type="number" id="day" name="day" min="1" max="31" required>
+            <label for="type">Tipo:</label>
+            <select id="type" name="type" required>
+                <option value="extra">Horas Extras</option>
+                <option value="missing">Horas Faltantes</option>
+            </select>
+            <label for="hours">Horas:</label>
+            <input type="number" id="hours" name="hours" min="0" required>
+            <label for="minutes">Minutos:</label>
+            <input type="number" id="minutes" name="minutes" min="0" max="59" required>
+            <button type="submit">Adicionar</button>
+        </form>
+        <div id="balance">
+            <h2>Saldo de Horas</h2>
+            <p>Total de Horas Extras: <span id="total-extra">0</span></p>
+            <p>Total de Horas Faltantes: <span id="total-missing">0</span></p>
+            <p>Saldo Total: <span id="total-balance">0</span></p>
+        </div>
+        <div id="day-summary">
+            <h2>Resumo por Dia</h2>
+            <ul id="day-summary-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
