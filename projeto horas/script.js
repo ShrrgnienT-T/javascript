@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let hoursByDay = loadFromLocalStorage() || {};
 
+    updateBalance(); // Chamada para exibir as informações salvas ao abrir o arquivo
+
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
