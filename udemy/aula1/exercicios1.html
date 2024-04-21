@@ -15,12 +15,15 @@
         document.getElementById("texto").style= "background:yellow"
     }
     function recuperValor(){
-        var valor=document.getElementById("texto").value
-        var tam= document.getElementById("texto").length
-        console.log(valor)
-        console.log(tam)
-        document.write("<h1>Ola Mundo</h1>")
+        // var valor=document.getElementById("texto").value
+        var tam= document.getElementById("texto").value.length
+        if(tam < 3){
+            document.getElementById("texto").style= "background:red"
+        }else{
+            document.getElementById("texto").style= "background:green"
+        }
     }
+
         
     
 </script>
