@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <input type="text" placeholder="Digite um texto" id="texto" onfocus="mudarBackground()"  onblur="recuperValor()" >
+
+</body>
+
+<script>
+    function mudarBackground(){
+        document.getElementById("texto").style= "background:yellow"
+    }
+    function recuperValor(){
+        var valor=document.getElementById("texto").value
+        var tam= document.getElementById("texto").length
+        console.log(valor)
+        console.log(tam)
+        document.write("<h1>Ola Mundo</h1>")
+    }
+        
+    
+</script>
+</html>
