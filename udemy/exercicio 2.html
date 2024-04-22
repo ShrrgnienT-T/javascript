@@ -1,32 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form>
-        <input type="text" id="texto" placeholder="digite o texto">
-        <button style="background: blue;  color:white" onclick="adicionar()"> Adicionar</button>
-        <button style="background: blue;  color:white" onclick="ordenar()"> ordenar</button>
-         
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title>JavaScript</title>
+ <script>
+ var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+ function adicionarObjetos() {
+ //recupera o valor inserido no campo id objeto
+ var objeto = document.getElementById('objeto').value
 
-    </form>
-</body>
-<script>
-    var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+ //caso possua algum valor preenchido entra no if
+ if(objeto != '') {
+ //verifica se o valor já não foi inserido anteriormente
+ //se sim, informa que valor já existe, se não insere novo valor
+ if( objetos.indexOf(objeto) !== -1) {
+ alert('Objeto já foi adicionado')
+ } else {
+ objetos.push(objeto)
+ console.log(objetos)
 
-    function adicionar(){
-        // var validacao = document.getElementById("texto")
-        // console.log(validacao)
-        console.log('ola')
+ document.getElementById('objeto').value = ''
+ }
 
-    }
+ } else {
+ alert('Informe um objeto válido')
 
-    // function ordenar(){
-    //     console.log('ola')
-    // }
+ }
+ }
+ function ordenarObjetos() {
+ objetos.sort()
+ console.log(objetos)
+ }
+ </script>
 
-</script>
+ </head>
+ <body>
+
+ <input type="text" id="objeto" />
+ <button onclick="adicionarObjetos()">Adicionar</button>
+ <button onclick="ordenarObjetos()">Ordenar</button>
+ </body>
 </html>
